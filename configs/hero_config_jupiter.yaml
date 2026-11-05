@@ -1,0 +1,34 @@
+data:
+    dt: 12
+    data_path: "era5_chunked.zarr"
+    constant_masks_path: "constant_masks"
+    constant_masks : ["soil_type_normalized.npy", "topography_normalized.npy", "sst_mask.npy"]
+    normalization_dir: "data/normalization"
+    train_subset: -1
+    valid_subset: -1
+    train_time_range: ["1979-01-01", "2019-12-31"]
+    valid_time_range: ["2022-01-01", "2022-12-31"]
+    test_time_range: ["2022-01-01", "2022-12-31"]
+    prefetch_factor: 1
+    num_workers: 32
+    n_variables: 84
+    n_in_timesteps: 2
+    n_out_timesteps: 1
+model:
+    model_id: "BEAST-JUPITER-2.6B-64K"
+    qk_norm: False
+    heads: [24,48,24]
+training:
+    tf32: True
+    n_samples: 1
+    n_epochs: 1
+    batch_size: 1
+    lr_scheduler: True
+    low_lr: 0.00001
+    normal_lr: 0.0001
+    dtype: float32
+    autocast: True
+    timings: False
+    checkpoint_interval: 1000
+    log_interval: 25
+mesh_dims: [1, 2, 4, 2]

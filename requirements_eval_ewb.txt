@@ -1,0 +1,8 @@
+extremeweatherbench @ git+https://github.com/RAI-SCC/ExtremeWeatherBench.git@8220bd0e9ea408c94839e5e32d688186b970f370
+numpy
+pandas
+xarray
+zarr
+polars
+cartopy
+matplotlib
