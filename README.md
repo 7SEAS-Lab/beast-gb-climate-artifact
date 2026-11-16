@@ -6,6 +6,8 @@
 <!-- Badge by FreeWebTools.com -->
 This repository presents the code associated with reproducing BEAST, the first-ever Bayesian Swin Transformer for atmospheric forecasting on 0.25 degree global resolution able to accurately quantify both aleatoric and epistemic uncertainty. We use a 4D-parallelization scheme that introduces a unique domain-tensor-parallelism strategy and a novel uncertainty parallel method, allowing us to achieve a peak performance of 3.96 EFLOP/s on 5120 NVIDIA GH200 nodes on the JUPITER supercomputer and 463.2 PFLOP/s on 1024 AMD MI250X nodes on the LUMI supercomputer. This contribution unlocks the potential of high-fidelity uncertainty quantification in atmospheric AI models.
 
+This is a paper artifact, and not in active development. To stay updated on latest developments, or to report any issues, please visit [beast](https://github.com/7SEAS-Lab/beast).
+
 ## Setup
 
 ### Dev tools (for your working environment, and code quality)
@@ -84,7 +86,7 @@ sbatch -A your_account -p booster --nodes <N_NODES> --tasks-per-node 4 --gres=gp
 
 ### On LUMI
 ```console
-sbatch -A your_account -p standard-g --nodes <N_NODES> --tasks-per-node 8 --gres=gpu:8 -t 00:06:00 --job-name=train_beast experiments/run_gb_script.sh systems/lumi_singularity.sh src/main.py --config_file configs/hero_config_lumi.yaml mesh_dims=-1,2,4,2 training_batch_size=2 data_train_subset=50
+sbatch -A your_account -p standard-g --nodes <N_NODES> --tasks-per-node 8 --gres=gpu:8 -t 00:06:00 --job-name=train_ experiments/run_gb_script.sh systems/lumi_singularity.sh src/main.py --config_file configs/hero_config_lumi.yaml mesh_dims=-1,2,4,2 training_batch_size=2 data_train_subset=50
 ```
 
 Go grab a cup of coffee and stare at loss values.
@@ -136,7 +138,7 @@ If you ever want to feel bad, add the `--perun` flag to `experiments/run_gb_scri
 
 ## Wiki
 
-### Distributed Process Groups in BEAST
+### Distributed Process Groups in 
 
 Parallel process group keys:
  - JChannel: Jigsaw Row Tensor Parallel group (part of DTP)
