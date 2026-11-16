@@ -6,7 +6,7 @@
 <!-- Badge by FreeWebTools.com -->
 This repository presents the code associated with reproducing BEAST, the first-ever Bayesian Swin Transformer for atmospheric forecasting on 0.25 degree global resolution able to accurately quantify both aleatoric and epistemic uncertainty. We use a 4D-parallelization scheme that introduces a unique domain-tensor-parallelism strategy and a novel uncertainty parallel method, allowing us to achieve a peak performance of 3.96 EFLOP/s on 5120 NVIDIA GH200 nodes on the JUPITER supercomputer and 463.2 PFLOP/s on 1024 AMD MI250X nodes on the LUMI supercomputer. This contribution unlocks the potential of high-fidelity uncertainty quantification in atmospheric AI models.
 
-This is a paper artifact, and not in active development. To stay updated on latest developments, or to report any issues, please visit [beast](https://github.com/7SEAS-Lab/beast).
+This is a paper artifact and is not in active development. To stay updated on latest developments, or to report any issues, please visit [beast](https://github.com/7SEAS-Lab/beast).
 
 ## Setup
 
