@@ -15,7 +15,7 @@ data:
     n_in_timesteps: 2
     n_out_timesteps: 1
 model:
-    model_id: "BEAST-LUMI-1.2B-1.8K"
+    model_id: "BEAST-LUMI-1.1B-64K"
     qk_norm: False
 training:
     tf32: False

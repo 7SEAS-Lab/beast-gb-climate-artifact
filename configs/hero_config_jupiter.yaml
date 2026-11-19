@@ -15,7 +15,7 @@ data:
     n_in_timesteps: 2
     n_out_timesteps: 1
 model:
-    model_id: "BEAST-JUPITER-2.6B-64K"
+    model_id: "BEAST-JUPITER-2.4B-64K"
     qk_norm: False
     heads: [24,48,24]
 training:
